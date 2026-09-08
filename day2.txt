@@ -1,0 +1,53 @@
+bs=int(input())
+
+allo=int(input())
+
+bo=int(input())
+
+ts=bs+allo+bo
+print("Total Salary",ts)
+
+
+
+basic_salary=int(input())
+allowance=int(input())
+bonus=int(input())
+total_salary=basic_salary+allowance+bonus
+print("Total Salary:",total_salary)
+
+
+
+price=int(input())
+qty=int(input())
+dis=int(input())
+final=price+qty+dis
+print("Final payable:",final)
+
+
+
+
+
+
+n=int(input())
+hundreds=(n//100)
+print("hundreds digit",hundreds)
+tens=(n//10)%10
+print("tens digit",tens)
+unit=(n%10)
+print("unit digit",unit)
+total=hundreds+tens+unit
+print("sum of the three digits",total)
+
+
+
+
+
+
+
+data_usage = int(input())
+
+gigabytes = data_usage // 1024
+remaining_mb = data_usage % 1024
+
+print(gigabytes)
+print(remaining_mb)
