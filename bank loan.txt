@@ -1,0 +1,30 @@
+age = int(input())
+credit_score = int(input())
+monthly_income = int(input())
+existing_emi = int(input())
+loan_amount = int(input())
+
+if age < 21 or age > 65:
+    print("Rejected")
+    print("Age not eligible")
+elif credit_score < 600:
+    print("Rejected")
+    print("Credit score too low")
+elif credit_score <= 750:
+    if monthly_income >= 50000 and existing_emi < 0.3 * monthly_income:
+        print("Approved")
+        print("Interest Rate: 12%")
+    else:
+        print("Approved")
+        print("Interest Rate: 14%")
+        print("Co-applicant Required")
+else:
+    if loan_amount <= 10 * monthly_income:
+        print("Approved")
+        print("Interest Rate: 8%")
+    elif loan_amount <= 20 * monthly_income:
+        print("Approved")
+        print("Interest Rate: 10%")
+    else:
+        print("Rejected")
+        print("Loan amount exceeds eligible limit")

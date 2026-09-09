@@ -1,0 +1,30 @@
+food_amount = float(input())
+day = input().strip()
+membership = input().strip()
+
+gst = food_amount * 0.05
+amount_after_gst = food_amount + gst
+
+if day == "Saturday" or day == "Sunday":
+    service_charge = food_amount * 0.10
+else:
+    service_charge = food_amount * 0.05
+
+amount_after_service = amount_after_gst + service_charge
+
+if membership == "Gold":
+    discount = amount_after_service * 0.08
+elif membership == "Silver":
+    discount = amount_after_service * 0.04
+else:
+    discount = 0
+
+final_bill = amount_after_service - discount
+
+if final_bill > 3000:
+    cashback = final_bill * 0.02
+else:
+    cashback = 0
+
+print(f"{final_bill:.2f}")
+print(f"{cashback:.2f}")

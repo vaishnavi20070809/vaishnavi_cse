@@ -1,0 +1,8 @@
+X, Y, Z = map(int, input().split())
+if Z <= 50:
+    cost = X
+else:
+    extra_km = Z - 50
+    cost = X + extra_km * Y
+
+print(cost)
